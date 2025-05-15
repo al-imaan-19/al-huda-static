@@ -1,0 +1,153 @@
+.services-bg {
+    background-image: url("../media/backgrounds/service-bg.jpg");
+    background-color: #121D18;
+    padding: 4.167vw 0 8.646vw 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include media-query(1399px) {
+        background-size: 109% 100%;
+        background-position: -70px 15px;
+    }
+
+    @include media-query(1199px) {
+        background-repeat: repeat;
+        background-size: contain;
+
+        background-position: -45px 15px;
+    }
+
+    @include media-query(767px) {
+        padding: clamp(75px, 2.5vw, 52px) 0;
+        background-repeat: repeat;
+        background-size: 112% 45%;
+        background-position: -45px 15px;
+    }
+
+
+
+    @include media-query(576px) {
+        padding: clamp(75px, 2.5vw, 52px) 0 clamp(137px, 2.5vw, 52px) 0;
+        background-size: contain;
+        background-repeat: repeat;
+        background-position: -108px 15px;
+
+    }
+
+
+    .services {
+        @include media-query(375px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .vector-element {
+        width: clamp(72px, 10.156vw, 160px);
+        /*195px */
+        height: clamp(72px, 10.417vw, 160px);
+        /*200px */
+        position: absolute;
+
+
+        &.element-1 {
+            top: clamp(18px, 2.5vw, 54px);
+            /* 48px*/
+            left: clamp(16px, 5vw, 100px);
+            /* 96px*/
+        }
+
+        &.element-2 {
+            top: clamp(18px, 2.5vw, 54px);
+            /* 48px*/
+            right: clamp(16px, 5vw, 100px);
+            /* 96px*/
+
+        }
+
+        &.element-3 {
+            bottom: clamp(26px, 4.896vw, 98px);
+            /* 94px*/
+            left: clamp(28px, 5vw, 100px);
+
+            /* 96px*/
+            @include media-query(767px) {
+                display: none;
+            }
+        }
+
+        &.element-4 {
+            bottom: clamp(26px, 4.896vw, 98px);
+            /* 94px*/
+            right: clamp(28px, 5vw, 100px);
+            /* 96px*/
+
+            @include media-query(767px) {
+                display: none;
+            }
+        }
+    }
+
+    .card-item {
+        background-color: $white;
+        border-radius: $br-16;
+        padding: clamp(12px, 1.25vw, 40px);
+
+        a {
+            color: $accent-3;
+            transition: $transition;
+
+            svg {
+                path {
+                    transition: $transition;
+                }
+            }
+
+            &:hover {
+                color: $accent-1;
+
+                svg {
+                    path {
+                        stroke: $accent-1
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .services-text {
+        color: $dark-gray;
+        padding-bottom: 1.667vw;
+    }
+
+    .icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(48px, 3.75vw, 96px);
+        height: clamp(48px, 3.75vw, 96px);
+        border-radius: 50%;
+        background-color: $accent-1;
+
+        @include media-query(576px) {
+            margin-bottom: clamp(4px, 0.417vw, 16px);
+        }
+
+        img {
+            width: clamp(30px, 2.188vw, 64px);
+            height: clamp(30px, 2.188vw, 64px);
+        }
+    }
+}
+
+
+.service-spacing {
+    @include media-query(576px) {
+        padding-bottom: 48px;
+    }
+}

@@ -1,0 +1,16 @@
+
+.title-banner{
+    background: url('../media/backgrounds/title-bg.png') no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    .title-wrapper{
+        padding-top: clamp(64px, 5vw, 150px);
+        .title-content{
+            @include media-query(490px){
+                text-align: center;
+               padding: clamp(40px, 9.796vw, 64px) 0;
+                
+            }
+        }
+    }
+}

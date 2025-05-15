@@ -1,0 +1,97 @@
+.pillar-of-islam {
+  @include media-query(567px){
+    br {
+      display: none;
+    }
+  }
+  
+  .pillars-row {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: clamp(18px, 1.25vw, 48px);
+    grid-row-gap: clamp(18px, 1.25vw, 48px);
+  
+  
+    
+    @include media-query(1024px) {
+      grid-template-columns: repeat(3, 1fr);
+  
+    }
+  
+    
+    @include media-query(576px) {
+      grid-template-columns: repeat(2, 1fr);
+  
+    }
+    
+    @include media-query(475px) {
+      grid-template-columns: repeat(1, 1fr);
+  
+    }
+  
+   
+  
+    .pillar-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: $br-16;
+      border: 1px solid $medium-black;
+      padding: 1.25vw;
+      background-image: url("../media/icons/Union.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      transition: $transition;
+      overflow: hidden;
+  
+      @include media-query(1024px) {
+        padding-bottom: clamp(42px, 1.667vw, 64px);
+        padding-top: clamp(42px, 1.667vw, 64px);
+      }
+      &:hover{ 
+        box-shadow: 0px 60px 46px -60px #f3b81679
+      }
+  
+      &.block-1 {
+        background-color: $accent-2;
+        
+      }
+  
+      &.block-2 {
+        background-color: $white-smoke;
+      }
+  
+      &.block-3 {
+        background-color: $light-gray;
+      }
+  
+      &.block-4 {
+        padding: clamp(18px, 1.25vw, 48px) clamp(17px, 1.2vw, 48px) ;
+        background-color: $lightest-gray;
+      }
+  
+      &.block-5 {
+        background-color: $accent-2;
+      }
+  
+      img {
+        margin: auto;
+        display: block;
+      }
+  
+      h5 {
+        align-self: stretch;
+        color: $medium-black;
+        font-family: $font-sec;
+        font-size: clamp(22px, 1.563vw, 42px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+    }
+  }
+}

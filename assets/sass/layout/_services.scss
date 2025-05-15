@@ -1,0 +1,55 @@
+.card-item {
+    background: url("../media/vector/services-bg.png") no-repeat;
+    background-size: auto;
+    background-position: 5% 50%;
+    background-color: $accent-2;
+    border-radius: $br-16;
+    padding: clamp(12px, 1.25vw, 40px);
+
+    a {
+        color: $accent-3;
+        transition: $transition;
+
+        svg {
+            path {
+                transition: $transition;
+            }
+        }
+
+        &:hover {
+            color: $accent-1;
+
+            svg {
+                path {
+                    stroke: $accent-1
+                }
+            }
+        }
+    }
+}
+
+
+
+.services-text {
+    color: $dark-gray;
+    padding-bottom: 1.667vw;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(48px, 3.75vw, 140px);
+    height: clamp(48px, 3.75vw, 140px);
+    border-radius: 50%;
+    background-color: $accent-1;
+
+    @include media-query(576px) {
+        margin-bottom: clamp(4px, 0.417vw, 16px);
+    }
+
+    img {
+        width: clamp(30px, 2.188vw, 70px);
+        height: clamp(30px, 2.188vw, 70px);
+    }
+}

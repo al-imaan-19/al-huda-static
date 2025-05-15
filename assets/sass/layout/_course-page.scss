@@ -1,0 +1,26 @@
+.course-page{
+
+    padding: 160px 0;
+    .signin-page{
+        background-image: url(../media/backgrounds/sign-in-form.jpg);
+        border-radius: $br-16;
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center;
+       padding:  clamp(48px, 3.333vw, 128px);
+       .signin-btn{
+        padding:  clamp(10px, 0.781vw, 28px) 0;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+       }
+    }
+    .register-now {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: clamp(13px, 0.938vw, 36px);
+        }
+    }
+}

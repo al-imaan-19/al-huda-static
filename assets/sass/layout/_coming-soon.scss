@@ -1,0 +1,213 @@
+.coming-soon-page {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+
+    .coming-soon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        ul {
+            display: flex;
+            gap: clamp(6px, 0.833vw, 24px);
+
+            li {
+                width: clamp(76px, 6.25vw, 240px);
+                height: clamp(76px, 6.25vw, 240px); 
+                border: 1px solid $accent-3;
+                border-radius: $br-8;
+                background: $lightest-gray;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                @include media-query(490px) {
+                    width: 76px;
+                    height: 84px;
+                }
+
+                h4 {
+                    color: $medium-black;
+                    font-family: $font-sec;
+                    text-transform: uppercase;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                    /* 66px */
+                }
+
+                p {
+                    color: $medium-black;
+                    font-family: $font-sec;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%;
+                    /* 27.6px */
+                }
+
+            }
+        }
+
+    }
+
+    .title-area {
+        img {
+            width: clamp(40%, 23.802vw, 500px);
+        }
+    }
+
+    .newsletter-text {
+        .text {
+            font-size: clamp(50px, 5.208vw, 150px);
+        }
+
+        form {
+            position: relative;
+            margin: 0 auto;
+            width: 29.167vw;
+
+            @include media-query(1024px) {
+                width: 45%;
+            }
+
+            @include media-query(490px) {
+                width: 100%;
+            }
+
+            input {
+                border-radius: $br-32;
+
+                @include media-query(1699px) {
+                    padding: 14px 16px;
+                }
+
+                @include media-query(1599px) {
+                    padding: 12px 16px;
+                }
+
+                @include media-query(1499px) {
+                    padding: 11px 16px;
+                }
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+
+
+                @include media-query(490px) {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+
+    form {
+        position: relative;
+
+        input {
+            gap: $gap-24;
+
+            &.form-input {
+                padding: clamp(13px, 0.938vw, 36px);
+                /* 18px */
+                padding-left: clamp(10px, 0.833vw, 20px);
+                border-radius: $br-8;
+                border: 1px solid $medium-black;
+                background: transparent;
+                font-family: $font-primary;
+                font-size: clamp(13px, 0.938vw, 26px);
+                /* 18px */
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: 0.32px;
+                position: relative;
+                color: $medium-black;
+                box-shadow: none;
+                width: 100%;
+                font-family: $font-primary;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+
+                @include media-query(430px) {
+                    padding-right: clamp(50px, 2.813vw, 56px);
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    outline: 0;
+                    color: $medium-black !important;
+                    background: transparent;
+                }
+
+                &::placeholder {
+                    color: $medium-black;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .submit-arrow {
+            position: absolute;
+            right: 0;
+            top: clamp(5px, 0.26vw, 6px);
+            background: transparent;
+            border: 0;
+
+            @include media-query(1399px) {
+                svg {
+                    path {
+                        fill: $accent-3;
+                        transition: $transition;
+                    }
+
+                }
+            }
+
+            @include media-query(1380px) {
+                svg {
+                    width: clamp(32px, 1.875vw, 48px);
+                    height: clamp(32px, 1.875vw, 48px);
+                }
+            }
+
+            @include media-query(1199px) {
+                svg {
+                    width: clamp(32px, 1.875vw, 48px);
+                    height: clamp(32px, 1.875vw, 48px);
+                }
+            }
+
+            svg {
+
+                path {
+                    color: $white;
+                    fill: $accent-3;
+                    transition: $transition;
+                }
+
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $accent-1;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+
+        .mailBox {
+            position: absolute;
+            left: clamp(14px, 0.833vw, 20px);
+            top: clamp(17px, 0.938vw, 19px);
+        }
+    }
+}
+

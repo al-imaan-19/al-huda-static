@@ -1,0 +1,109 @@
+.course {
+    background-image: url('../media/backgrounds/courses-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include media-query(576px) {
+        br {
+            display: none;
+        }
+    }
+
+    .course-card {
+        p {
+            @include media-query(1273px) {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .course-1 {
+            position: relative;
+            border-radius: $br-16 $br-16 0 0;
+        }
+
+        .icon {
+            display: inline-flex;
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            background-color: $accent-3;
+            border-radius: 50%;
+            border: 3px solid $white;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: clamp(30px, 1.75vw, 40px);
+                /* 33.68*/
+                height: clamp(30px, 1.75vw, 40px);
+                /* 33.68*/
+                display: flex;
+
+            }
+        }
+
+        .cart-data {
+            margin: -28px clamp(18px, 1.25vw, 48px);
+            z-index: 1;
+            position: relative;
+
+            .stars {
+                color: $accent-1;
+            }
+
+            .detail {
+                gap: $gap-48;
+                padding: clamp(12px, 0.833vw, 32px) 0;
+                border-bottom: 1px solid $medium-black;
+                border-top: 1px solid $medium-black;
+            }
+
+            .card-buttons {
+                flex-wrap: wrap;
+                display: flex;
+                gap: $gap-24;
+
+                @include media-query(1499px) {
+                    display: flex;
+                    gap: $gap-24;
+                    flex-wrap: wrap;
+
+                    .price {
+                        padding: clamp(10px, 0.729vw, 28px) clamp(16px, 1.667vw, 64px);
+                    }
+
+                }
+
+                .line {
+                    width: clamp(350px, 19.063vw, 40px);
+                }
+
+                .price {
+                    align-items: center;
+                    justify-content: center;
+                    padding: clamp(10px, 0.729vw, 28px) clamp(18px, 1.25vw, 48px);
+
+
+                    @include media-query(1499px) {
+                        padding: clamp(12px, 0.833vw, 32px) clamp(16px, 1.667vw, 64px);
+
+                    }
+
+                    .new-price {
+                        text-decoration: underline;
+
+                    }
+                }
+
+
+                .cus-btn {
+                    font-size: clamp(12px, 0.833vw, 32px);
+                }
+            }
+
+
+        }
+    }
+}

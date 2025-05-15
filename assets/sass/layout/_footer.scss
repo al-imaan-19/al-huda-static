@@ -1,0 +1,265 @@
+footer {
+    .footer-copyright {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+      
+
+        @include media-query(767px) {
+            flex-direction: column;
+            padding: 24px 0;
+
+            p {
+                padding: 8px;
+
+            }
+
+            ul {
+                margin: 0;
+                gap: $gap-48;
+                padding: 8px;
+            }
+        }
+
+
+
+        @include media-query(936px) {
+            flex-direction: column;
+            padding: 24px 0;
+
+            p {
+                padding: 8px;
+
+            }
+
+            ul {
+                margin: 0;
+                gap: $gap-48;
+                padding: 8px;
+            }
+        }
+
+        @include media-query(576px){
+            padding: 12px 0;
+        }
+
+        p {
+
+            @include media-query(575px) {
+                text-align: center;
+    
+            }
+        }
+    }
+
+}
+
+.footer-container {
+    padding: 120px 0px 40px 0px;
+    background-image: url(../media/backgrounds/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.footer-link {
+    color: $medium-black;
+    text-decoration: none;
+    width: clamp(30px, 2.083vw, 88px);
+    height: clamp(30px, 2.083vw, 88px);
+    border-radius: $br-8;
+    background-color: $accent-1;
+
+    &:hover {
+        transition: $transition;
+        background-color: $white;
+    }
+}
+
+
+.logo-block {
+    .ft-logo{
+        width:  clamp(270px, 15.779vw, 350px);
+    }
+    p{
+        @include media-query(576px){
+            br{
+                display: none;
+            }
+        }
+    }
+
+    .logo-hr {
+        width: clamp(244px, 19.583vw, 400px);
+        height: 0;
+        @include media-query(1280px){
+            width: clamp(222px, 19.583vw, 400px);
+        }
+        @include media-query(1180px){
+            width: clamp(190px, 19.583vw, 400px);
+        }
+        @include media-query(990px){
+            width: clamp(340px, 19.583vw, 400px);
+
+        }
+    }
+}
+
+.widget-title{
+   
+        @include media-query(576px){
+            font-size: 20px;
+        }
+    }
+
+.footer-list {
+    .free-label {
+        padding: 0.208vw 0.625vw;
+        border-radius: $br-32;
+        background: $accent-2;
+        color: $accent-1;
+    }
+
+    li {
+        a {
+            color: $lightest-gray;
+            transition: $transition;
+            font-weight: 400;
+        }
+
+        &:hover {
+            a {
+                color: $accent-1;
+                transition: $transition;
+            }
+        }
+    }
+
+    .subtitle {
+        font-size: clamp(12px, 0.833vw, 32px);
+    }
+}
+
+form {
+    position: relative;
+
+    input {
+        gap: $gap-24;
+
+        &.form-input {
+            padding: clamp(13px, 0.938vw, 36px);
+            /* 18px */
+            padding-left: clamp(10px, 0.833vw, 20px);
+            border-radius: $br-8;
+            border: 1px solid $lightest-gray;
+            background: transparent;
+            font-family: $font-primary;
+            font-size: clamp(13px, 0.938vw, 26px);
+            /* 18px */
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.32px;
+            position: relative;
+            color: $white;
+            box-shadow: none;
+            width: 100%;
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+
+            @include media-query(430px) {
+                padding-right: clamp(50px, 2.813vw, 56px);
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: 0;
+                color: $white !important;
+                background: transparent;
+            }
+
+            &::placeholder {
+                color: $lightest-gray;
+                opacity: 1;
+            }
+        }
+    }
+
+    .submit-arrow {
+        
+        position: absolute;
+        right: 0;
+        top: clamp(5px, 0.26vw, 6px);
+        background: transparent;
+        border: 0;
+        svg {
+            width: clamp(12px, 2.5vw, 88px);
+            height: clamp(12px, 2.5vw, 88px);
+        }
+
+        @include media-query(1399px) {
+            svg {
+                path {
+                    fill: $white;
+                    transition: $transition;
+                }
+
+            }
+        }
+
+        @include media-query(1780px) {
+            svg {
+                width: clamp(42px, 1.875vw, 48px);
+                height: clamp(42px, 1.875vw, 48px);
+            }
+        }
+        @include media-query(1480px) {
+            svg {
+                width: clamp(32px, 1.875vw, 48px);
+                height: clamp(32px, 1.875vw, 48px);
+            }
+        }
+        @include media-query(1199px) {
+            svg {
+                width: clamp(32px, 1.875vw, 48px);
+                height: clamp(32px, 1.875vw, 48px);
+            }
+        }
+
+        svg {
+
+            path {
+                fill: $white;
+                transition: $transition;
+            }
+
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: $accent-1;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+
+    .mailBox {
+        position: absolute;
+        left: clamp(14px, 0.833vw, 20px);
+        top: clamp(17px, 0.938vw, 19px);
+    }
+}
+
+
+
+.bottom-bar {
+    @include media-query(490px) {
+        line-height: 220%;
+    }
+}

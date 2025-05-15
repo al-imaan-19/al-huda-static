@@ -1,0 +1,104 @@
+.prayer-timing-section {
+    padding-top:   clamp(65px, 4.167vw, 100px); /*80 px*/
+    background-image: url(../media/backgrounds/timimg-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: clamp(110px, 8.688vw, 180px); /*166 px*/
+
+    @include media-query(768px) {
+        background-position: 35% 100%;
+    }
+    @include media-query(576px) {
+        background-position: top;
+    }
+    @include media-query(375px){
+        background-position: 32% 32%;
+    }
+
+    @include media-query(576px){
+        padding-bottom: clamp(86px, 2.5vw, 52px) ;
+    
+    }
+}
+
+
+    .prayer-time-text{
+        font-size: clamp(12px, 0.833vw, 32px);
+    }
+
+
+
+.table-wrapper{
+    padding: 0 5vw;
+    .pray-time-table {
+        width: 100%;
+        .pray-time-heading {
+            color: $accent-1;
+            font-family: $font-sec;
+            font-size: clamp(22px, 1.25vw, 48px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            /* 36px */
+        }
+    
+        thead {
+            tr {
+                th {
+                    padding: 1.042vw 0;
+                    text-align: center;
+                    border-bottom: 1px solid $medium-black;
+    
+                    &:first-child {
+                        text-align: left;
+                        width: 33.33%;
+                    }
+                    &:nth-child(2){
+                        width: 33.33%;
+                    }
+                    &:last-child {
+                        width: 33.33%;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    
+        tbody {
+            tr {
+                border-bottom: 1px solid;
+    
+                &:last-child {
+                    border: none;
+                }
+    
+                td {
+                    padding: clamp(12px, 1.042vw, 40px) 0; /*20px */
+                    text-align: center;
+    
+                    &:first-child {
+                        text-align: left;
+                    }
+    
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.time {
+    color: $dark-gray;
+    /* Text/Medium Text */
+    font-family: $font-sec;
+    font-size: clamp(16px, 0.938vw, 36px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    /* 27px */
+}

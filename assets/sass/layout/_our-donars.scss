@@ -1,0 +1,99 @@
+.donars {
+    p {
+        @include media-query(992px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .testimonials-slider {
+        // margin: 0 -12px;
+
+        @include media-query(1200px) {
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+
+        .slick-dots {
+            margin-left: clamp(9px, 0.521vw, 20px);
+            position: unset;
+            display: flex;
+            justify-content: start;
+            margin-top: clamp(24px, 1.667vw, 48px);
+
+            li {
+                width: 16px;
+                height: 6px;
+                border-radius: $br-4;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                background: $medium-black;
+                transition: $transition;
+
+                @include media-query(490px) {
+                    width: 12px;
+                    height: 4px;
+                }
+
+                &.slick-active {
+                    height: 6px;
+                    width: 32px;
+                    border-radius: $br-4;
+                    background-color: $accent-3;
+
+                }
+
+                button {
+
+                    /* 18px */
+                    &:before {
+                        color: transparent;
+                    }
+                }
+            }
+        }
+
+        .slider__counter {
+            position: absolute;
+            bottom: -11px;
+            left: 134px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 150%;
+            color: $accent-3;
+            pointer-events: none;
+
+            &:active {
+                color: $medium-black;
+            }
+
+
+            @include media-query(992px) {
+                padding-bottom: 20px;
+            }
+
+            @include media-query(576px) {
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding-bottom: 20px;
+
+            }
+
+
+        }
+
+        .donar-block {
+            border-radius: $br-16;
+            border: 1px solid $accent-3;
+            padding: clamp(18px, 1.25vw, 48px);
+
+            .donar-icon {
+                border-radius: 50%;
+                border: 1px solid $accent-3;
+            }
+        }
+    }
+}

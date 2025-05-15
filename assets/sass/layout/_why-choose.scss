@@ -1,0 +1,104 @@
+.why-choose {
+  @include media-query(567px) {
+    h3 {
+      margin-bottom: clamp(10px, 0.729vw, 28px);
+    }
+    br {
+      display: none;
+    }
+  }
+
+  .pillars-row {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.25vw;
+    grid-row-gap: 1.25vw;
+
+    @include media-query(1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-query(992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-query(566px) {
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $medium-black;
+      width: clamp(70px, 6.25vw, 150px);
+      height: clamp(70px, 6.25vw, 150px);
+      border-radius: 50%;
+      background-color: $accent-1;
+
+      .icon-image {
+        width: clamp(40px, 3.75vw, 74px);
+        height: clamp(40px, 3.75vw, 74px);
+      }
+    }
+
+    .why-choose-block {
+      background-image: url("../media/icons/Union.png");
+      background-position: 50% 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: $br-16;
+      border: 1px solid $medium-black;
+      padding: clamp(18px, 1.25vw, 48px);
+      background-repeat: no-repeat;
+      background-size: auto;
+
+      &.block-1 {
+        background-color: $accent-2;
+      }
+
+      &.block-2 {
+        background-color: $white-smoke;
+      }
+
+      &.block-3 {
+        background-color: $light-gray;
+      }
+
+      &.block-4 {
+        background-color: $lightest-gray;
+      }
+
+      h5 {
+        align-self: stretch;
+        color: $medium-black;
+        font-family: $font-sec;
+        font-size: clamp(22px, 1.563vw, 62px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+      &:hover {
+        .icon-box {
+          -webkit-animation: bounce 0.4s ease infinite alternate;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+  }
+}

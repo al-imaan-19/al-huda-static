@@ -1,0 +1,54 @@
+.prayer-timing {
+
+    .prayer-timming {
+        align-items: center;
+        background-color: $lightest-gray;
+        border-radius: $br-16;
+        border: 2px solid $accent-3;
+        padding: clamp(50px, 2.292vw, 54px) clamp(40px, 2.5vw, 54px);
+
+        @include media-query(1280px) {
+            padding: clamp(20px, 2.292vw, 54px) clamp(40px, 2.5vw, 54px);
+
+        }
+
+        @include media-query(768px) {
+            padding: clamp(64px, 2.292vw, 54px) clamp(14px, 2.5vw, 54px);
+
+        }
+
+        @include media-query(576px) {
+            padding: clamp(40px, 2.292vw, 54px) clamp(40px, 2.5vw, 54px);
+
+        }
+    }
+
+
+
+    .jummah-time-table {
+        text-align: center;
+        align-items: center;
+        background-color: $lightest-gray;
+        border-radius: $br-16;
+        border: 2px solid $accent-3;
+        padding: clamp(20px, 1.25vw, 48px);
+
+        .masjid-icon {
+            width: clamp(58px, 5.208vw, 130px);
+            // height: clamp(68px, 4.589vw, 128px);
+        }
+
+        .table-vector {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../media/backgrounds/hero-table-shape.png);
+
+            @include media-query(768px) {
+                background-size: contain;
+
+
+            }
+        }
+    }
+}

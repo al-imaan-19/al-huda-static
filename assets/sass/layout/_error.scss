@@ -1,0 +1,45 @@
+.error-page{
+    background-image: url(../media/backgrounds/404-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.error-wrapper {
+    text-align: center;
+
+    h2 {
+        text-align: center;
+        color: $accent-3;
+        font-size: clamp(120px, 20.833vw, 800px);
+        font-style: normal;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-top: clamp(-93px, -4.792vw, -82px);
+
+        @include media-query(1299px) {
+            margin-top: clamp(-55px, -3.229vw, -82px);
+
+        }
+
+        @include media-query(992px) {
+            margin-top: clamp(-35px, -3.229vw, -82px);
+
+        }
+    }
+
+
+    @include media-query(1080px) {
+        p {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .error-icon {
+        position: relative;
+        width: clamp(80px, 7.813vw, 180px);
+        height: clamp(80px, 7.813vw, 180px);
+    }
+}

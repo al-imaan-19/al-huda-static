@@ -1,0 +1,65 @@
+.pricing-cards {
+    h3 {
+        @include media-query(992px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    p {
+        @include media-query(992px) {
+            br {
+                display: none;
+            }
+        }
+    }
+.cards-border{
+    border: 1px solid;
+}
+    .cards {
+
+        padding: clamp(40px, 2.5vw, 54px) clamp(18px, 1.25vw, 48px);
+        border-radius: $br-32;
+
+        .list-bg {
+            border-radius: $br-8;
+            padding: clamp(5px, 0.521vw, 20px);
+            background-color: #FFECBF;
+        }
+
+
+        .icons {
+            display: flex;
+            justify-content: center;
+
+
+            .price-icon {
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: clamp(70px, 7.292vw, 220px);
+                height: clamp(70px, 7.292vw, 220px);
+                border-radius: 50%;
+                background-color: $accent-1;
+                border: 2.33px solid $medium-black;
+            }
+        }
+
+        .unorder-list {
+            ul {
+                li {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    .free-trail-btn{
+        a{
+
+            padding: clamp(10px, 0.729vw, 28px) clamp(28px, 1.979vw, 76px) ;
+        }
+    }
+}

@@ -1,0 +1,543 @@
+.course-detail-section {
+    .label-tag {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: $br-4;
+        background: $accent-2;
+        color: $accent-1;
+        cursor: pointer;
+
+        &.video-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+        }
+    }
+
+    .course-detail-wrapper {
+
+        .course-tabs-wrapper {
+            .nav {
+                display: inline-flex;
+                gap: $gap-4;
+                row-gap: 24px;
+                border: 0px;
+                position: relative;
+                width: 100%;
+
+                @include media-query(452px) {
+                    gap: 16px;
+                }
+                
+                .nav-item {
+                    width: 24.66%;
+                    @include media-query(490px) {
+                        width: 47.66%;
+                    }
+                    .nav-link {
+                        width: 100%;
+                        color: $dark-gray;
+                        font-family: $font-primary;
+                        font-size: clamp(16px, 0.938vw, 22px);
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 150%;
+                        border: 0px;
+                        border-radius: $br-4;
+                        padding: clamp(10px, 0.859vw, 32px);
+                        background: $lightest-gray;
+                        position: relative;
+                        
+
+                        &.active {
+                            font-weight: 500;
+                            background: $accent-1;
+                            color: $white;
+                            transition: $transition;
+                            border: 0px;
+                        }
+                        
+                        &:hover {
+                            background: $accent-1;
+                            color: $white;
+                            transition: $transition;
+                        }
+                    }
+                }
+            }
+
+            .tutor-container{
+                display: flex;
+                align-items: center;
+                @include media-query(490px){
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .tutor-image{
+                    display: flex;
+                    flex-shrink: 0;
+                }
+            }
+
+            .faq-block {
+                .accordion-button {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0;
+                    position: relative;
+                    color: $dark-gray;
+                    background: $white;
+                    padding: clamp(10px, 0.625vw, 30px);
+                    padding-left: clamp(42px, 2.5vw, 60px);
+                    border-radius: $br-8;
+                    font-family: $font-primary;
+                    font-size: clamp(16px, 0.938vw, 22px);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%; /* 21.6px */
+                    @include media-query(490px){
+                        align-items: flex-start;
+                    }
+                    @include media-query(399px){
+                        font-size: 14px;
+                    }
+                    &.collapsed {
+                        border-radius: 0px;
+                        padding: clamp(10px, 0.625vw, 30px);
+                        padding-left: clamp(42px, 2.5vw, 60px);
+                        margin: 0;
+                        
+                        &::before {
+                            background-image: none !important;
+                            color: $black;
+                            content: "\f078";
+                            font-family: $font-awesome;
+                        }
+                    }
+                    &:not(.collapsed) {
+                        color: $black;
+                        box-shadow: none;
+                    }
+                    &:focus{
+                        border: none;
+                        box-shadow: none;
+                    }
+                    
+                    &::before {
+                        content: "\f077";
+                        font-family: $font-awesome;
+                        background-image: none !important;
+                        position: absolute;
+                        left: 12px;
+                        font-weight: 300;
+                        color: $black;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                }
+                .accordion-button-2 {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0;
+                    position: relative;
+                    color: $dark-gray;
+                    background: $white;
+                    padding: clamp(10px, 0.625vw, 30px);
+                    padding-left: clamp(42px, 2.5vw, 60px);
+                    border-radius: $br-8;
+                    font-family: $font-primary;
+                    font-size: clamp(16px, 0.938vw, 22px);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%; /* 21.6px */
+                    @include media-query(1599px){
+                        padding-left: 0;
+                    }
+                    @include media-query(399px){
+                        font-size: 14px;
+                    }
+                    &.collapsed {
+                        border-radius: 0px;
+                        padding: clamp(10px, 0.625vw, 30px);
+                        padding-left: clamp(42px, 2.5vw, 60px);
+                        margin: 0;
+                        @include media-query(1599px){
+                            padding-left: 0;
+                        }
+                        
+                        &::after {
+                            background-image: none !important;
+                            color: $black;
+                            content: "\f078";
+                            font-family: $font-awesome;
+                        }
+                    }
+                    &:not(.collapsed) {
+                        color: $accent-1;
+                        box-shadow: none;
+                    }
+                    &:focus{
+                        border: none;
+                        box-shadow: none;
+                    }
+                    &::after {
+                        content: "\f077";
+                        font-family: $font-awesome;
+                        background-image: none !important;
+                        position: absolute;
+                        right: 36%;
+                        font-weight: 300;
+                        color: $black;
+                        font-size: clamp(16px, 1.042vw, 26px);
+                        cursor: pointer;
+                        @include media-query(1024px){
+                            right: 40%;
+                        }
+                        @include media-query(820px){
+                            right: 38%;
+                        }
+                        @include media-query(768px){
+                            right: 37%;
+                        }
+
+                        @include media-query(490px){
+                            right: 26%;
+                        }
+                    }
+                }
+                .faq-detail-block{
+                    padding: 0;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: clamp(10px, 0.833vw, 32px) clamp(8px, 0.625vw, 16px);
+                        @include media-query(490px){
+                            gap: $gap-48;
+                        }
+                        &:nth-child(2){
+                            border-top: 1px solid $lightest-gray;
+                            border-bottom: 1px solid $lightest-gray;
+                        }
+                    }
+                }
+            }
+
+            .review-section{
+                display: flex;
+                align-items: center;
+                gap: $gap-32;
+                width: 100%;
+                @include media-query(490px){
+                    flex-wrap: wrap;
+                }
+                .rating-box{
+                    width: 23%;
+                    padding: clamp(32px, 2.5vw, 60px) clamp(12px, 0.833vw, 24px);
+                    display: grid;
+                    align-items: center;
+                    @include media-query(1599px){
+                        width: 30%;
+                        padding: clamp(36px, 3.002vw, 52px) 16px;
+                    }
+                    @include media-query(1024px){
+                        padding: 48px 16px;
+                    }
+                    @include media-query(490px){
+                        width: 100%;
+                        padding: 16px;
+                    }
+                    .review-btn{
+                        padding: clamp(12px, 0.833vw, 24px) clamp(18px, 1.667vw, 48px);
+                        background: $accent-1;
+                        border-radius: $br-8;
+                        color: $white;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                }
+                .skills-bar-container {
+                    position: relative;
+                    list-style: none;
+                    padding: 0;
+                    width: 75%;
+                    @include media-query(490px){
+                        width: 100%;
+                    }
+
+                    li {
+                        position: relative;
+                        width: 100%;
+        
+                        .progressbar-title {
+                            display: flex;
+                            align-items: center;
+                            gap: $gap-16;
+                            color: $dark-gray;
+                            font-weight: 600;
+                            .number{
+                                display: flex;
+                                align-items: center;
+                                gap: $gap-8;
+                            }
+                        }
+        
+                        .bar-container {
+                            background: $lightest-gray;
+                            position: relative;
+                            width: 100%;
+                            height: clamp(8px, 0.833vw, 30px);
+                            display: block;
+                            border-radius: $br-12;
+        
+                            .progressbar {
+                                position: absolute;
+                                width: 0%;
+                                height: 100%;
+                                border-radius: $br-12;
+                                -webkit-animation-duration: 1s;
+                                animation-duration: 1s;
+                                -webkit-animation-timing-function: ease-out;
+                                animation-timing-function: ease-out;
+                                -webkit-animation-fill-mode: both;
+                                animation-fill-mode: both;
+                                
+                            }
+        
+                            #progress-css {
+                                -webkit-animation-name: progress-css;
+                                animation-name: progress-css;
+                                -webkit-animation-delay: 0.3s*1;
+                                animation-delay: 0.3s*1;
+                            }
+                            #progress-javascript {
+                                -webkit-animation-name: progress-javascript;
+                                animation-name: progress-javascript;
+                                -webkit-animation-delay: 0.3s*2;
+                                animation-delay: 0.3s*2;
+                            }
+                            #progress-angular {
+                                -webkit-animation-name: progress-angular;
+                                animation-name: progress-angular;
+                                -webkit-animation-delay: 0.3s*3;
+                                animation-delay: 0.3s*3;
+                            }
+                            #progress-php {
+                                -webkit-animation-name: progress-php;
+                                animation-name: progress-php;
+                                -webkit-animation-delay: 0.3s*4;
+                                animation-delay: 0.3s*4;
+                            }
+                            #progress-mysql {
+                                -webkit-animation-name: progress-mysql;
+                                animation-name: progress-mysql;
+                                -webkit-animation-delay: 0.3s*5;
+                                animation-delay: 0.3s*5;
+                            }
+                        }
+        
+                        // end bar-container
+                    }
+                }
+        
+                .progressbar {
+                    background-color: $accent-1;
+                }
+        
+        
+                @-webkit-keyframes progress-css {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 90%;
+                    }
+                }
+        
+                @-webkit-keyframes progress-javascript {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 70%;
+                    }
+                }
+        
+                @-webkit-keyframes progress-angular {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 65%;
+                    }
+                }
+                
+                @-webkit-keyframes progress-php {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 50%;
+                    }
+                }
+                @-webkit-keyframes progress-mysql {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 35%;
+                    }
+                }
+        
+                @-moz-keyframes progress-css {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 90%;
+                    }
+                }
+        
+                @-moz-keyframes progress-javascript {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 70%;
+                    }
+                }
+        
+                @-moz-keyframes progress-angular {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 65%;
+                    }
+                }
+
+                @-moz-keyframes progress-php {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 50%;
+                    }
+                }
+
+                @-moz-keyframes progress-mysql {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 35%;
+                    }
+                }
+        
+                @keyframes progress-css {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 90%;
+                    }
+                }
+        
+                @keyframes progress-javascript {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 70%;
+                    }
+                }
+        
+                @keyframes progress-angular {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 65%;
+                    }
+                }
+
+                @keyframes progress-php {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 50%;
+                    }
+                }
+
+                @keyframes progress-mysql {
+                    0% {
+                        width: 0%;
+                    }
+        
+                    100% {
+                        width: 35%;
+                    }
+                }
+
+            }
+            // Rating Stars with Radio Button
+            .star-rating {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: start;
+                gap: 4px;
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    color: $light-gray;
+                    cursor: pointer;
+                    font-size: clamp(20px, 1.25vw, 32px);
+                }
+            }
+
+            .star-rating :checked~label {
+                color: #FD961E;
+            }
+
+            .star-rating label:hover,
+            .star-rating label:hover~label {
+                color: #FD961E;
+            }
+            // Rating Stars with Radio Button
+        }
+    }
+    .star{
+        margin-top: -6px;
+    }
+
+    .course-sidebar {
+        .video-block {
+            position: relative;
+
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

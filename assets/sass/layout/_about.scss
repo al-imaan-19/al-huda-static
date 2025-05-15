@@ -1,0 +1,202 @@
+.about-us {
+    background-image: url('../media/backgrounds/about-us-bg-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: sticky;
+
+    .madarsh-icon {
+        img {
+
+            width: clamp(100px, 7.292vw, 160px);
+            height: clamp(100px, 7.292vw, 160px);
+        }
+
+    }
+
+    .icon-box {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(46px, 2.865vw, 140px);
+        height: clamp(46px, 2.865vw, 140px);
+        border-radius: 50%;
+        background-color: $accent-3;
+
+        .mosque-image {
+            width: clamp(34px, 2.143vw, 52px);
+            height: clamp(30px, 1.875vw, 40px);
+        }
+
+        .box-image-2 {
+            width: clamp(25px, 1.979vw, 34px);
+            height: clamp(26px, 2.188vw, 34px);
+        }
+
+
+
+
+    }
+
+    .islamic {
+        width: clamp(118px, 10.527vw, 220px);
+        // height: clamp(30px, 2.5vw, 68px);
+    }
+
+    .image-box {
+
+        @include media-query(555px) {
+            flex-direction: column;
+            align-items: flex-start !important;
+
+        }
+    }
+
+    .points {
+        width: clamp(186px, 14.01vw, 280px);
+        /*269px */
+
+
+        @include media-query(555px) {
+            width: clamp(323px, 14.01vw, 280px);
+            /*269px */
+
+        }
+
+    }
+
+
+    .point {
+        padding-right: 3.333vw;
+    }
+
+    .choose-block {
+
+        .text-box {
+            .line-1 {
+                display: flex;
+                height: 8px;
+                width: 100px;
+                background-color: $accent-3;
+
+                @include media-query(576px) {
+                    width: 100%;
+                }
+
+                .line-2 {
+                    height: 8px;
+                    width: 50px;
+                    background-color: $accent-1;
+
+                    @include media-query(576px) {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .choose-heading {
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -0.208vw;
+                    left: 0;
+                    background: $accent-2;
+                    height: 0.104vw;
+                    width: 100%;
+                }
+            }
+        }
+
+        .choose-icon {
+            width: 20.313vw;
+        }
+
+        .choose-icon-2 {
+            width: clamp(50px, 4.167vw, 140px);
+        }
+    }
+
+
+    .about-frame {
+        position: relative;
+
+        @include media-query(991px) {
+            margin-left: 5.417vw;
+
+        }
+
+        @include media-query(768px) {
+            margin-left: 5.417vw;
+
+        }
+
+
+        .about-image {
+            @include media-query(991px) {
+                max-height: 450px;
+                object-fit: cover;
+                object-position: bottom;
+                width: 100%;
+            }
+
+            @include media-query(768px) {
+                max-height: 350px;
+                object-fit: cover;
+                object-position: bottom;
+                width: 100%;
+            }
+        }
+
+        .green-line {
+            bottom: clamp(33px, 1.458vw, 48px);
+            left: clamp(-18px, -1.25vw, 48px);
+            z-index: -1;
+            position: absolute;
+            width: clamp(22px, 2.083vw, 80px);
+            height: clamp(192px, 29.792vw, 582px);
+            background-color: $accent-3;
+
+            @include media-query(1499px) {
+                bottom: clamp(24px, 1.458vw, 48px);
+
+            }
+
+            .first-line {
+                width: clamp(22px, 2.083vw, 80px);
+                height: clamp(48px, 6.771vw, 180px);
+                background-color: $accent-1;
+            }
+
+
+        }
+
+        .since {
+            bottom: clamp(-27px, -1.354vw, 48px);
+            position: absolute;
+            bottom: clamp(-27px, -1.354vw, 48px);
+            left: clamp(-96px, -5.417vw, 118px);
+            border-radius: $br-16;
+            background-image: url(../media/about/since-bg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+
+            .table-icon {
+                gap: $gap-8;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                padding: clamp(4px, 0.625vw, 24px) clamp(10px, 1.667vw, 64px);
+
+                .row-icon {
+                    width: clamp(22px, 1.667vw, 64px);
+                    // height:  clamp(25px, 1.667vw, 64px);
+                }
+            }
+
+        }
+    }
+}

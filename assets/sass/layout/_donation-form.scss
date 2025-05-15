@@ -1,0 +1,79 @@
+.donation {
+    background-image: url('../media/backgrounds/donation-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    border-radius: $br-8;
+    border: 1px solid $accent-3;
+    width: fit-content;
+
+    .input-number {
+        width: clamp(120px, 7.656vw, 150px);
+        background-color: transparent;
+        padding: clamp(8px, 0.625vw, 24px);
+        outline: none;
+        border: none;
+        font-size: 22px;
+        font-weight: 500;
+        font-family: $font-sec;
+    }
+
+    .dollar-icon {
+        background-color: $lightest-gray;
+        padding: clamp(8px, 0.625vw, 24px) clamp(18px, 1.25vw, 48px);
+        background-color: $lightest-gray;
+        border-top-left-radius: $br-8;
+        border-bottom-left-radius: $br-8;
+
+    }
+
+    h6 {
+        padding: clamp(8px, 0.625vw, 24px);
+    }
+
+    .dollar-icon-price {
+        padding: clamp(8px, 0.625vw, 24px);
+        border-right: 1px solid $accent-3 ;
+    }
+}
+
+.total-price {
+    padding-bottom: clamp(8px, 0.625vw, 24px);
+    border-bottom: 1px solid;
+}
+
+.donation-names {
+    padding-left: 0%;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 12px;
+    display: flex;
+
+    li {
+        font-weight: 500;
+        width: fit-content;
+        background-color: $lightest-gray;
+        color: $dark-gray;
+        padding: clamp(8px, 0.625vw, 24px) clamp(18px, 1.25vw, 48px);
+        display: flex;
+        align-items: center;
+        border-radius: $br-8;
+        border: 1px solid $accent-3;
+    }
+}
+
+.payment-mathod {
+    border-bottom: 1px solid $medium-black;
+
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}

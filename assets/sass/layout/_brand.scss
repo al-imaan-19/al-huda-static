@@ -1,0 +1,29 @@
+
+.brand-section{
+    .brand-slider{
+        margin: 0 -12px;
+        @include media-query(1024px){
+            margin: 0;
+        }
+    }
+    .brand-block{
+        background: $white;
+        padding: 20px;
+        border: 1px solid $lightest-gray;
+        border-radius: $br-8;
+        display: flex;
+        justify-content: center;
+        margin: 0 12px;
+        @include media-query(490px){
+            padding: 10px;
+            width: 100%;
+            height: 54.5px;
+        }
+        img{
+            @include media-query(490px){
+                width: 80%;
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.gallery {
+    .gallery-heading {
+        @include media-query(567px) {
+            p{
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

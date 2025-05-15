@@ -1,0 +1,134 @@
+.islamic-scoler {
+  background-image: url(../media/backgrounds/islamic-scolers-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  @include media-query(576px) {
+    br {
+      display: none;
+    }
+  }
+
+  @include media-query(576px) {
+    padding: clamp(42px, 2.5vw, 52px) 0;
+    background-repeat: repeat;
+    background-size: 112% 35%;
+    background-position: -45px 15px;
+  }
+
+  @include media-query(767px) {
+    padding: clamp(42px, 2.5vw, 52px) 0;
+    background-repeat: repeat;
+    background-size: 112% 35%;
+    background-position: -45px 15px;
+  }
+  .islamic-scolars {
+    position: relative;
+
+    .vector-elements {
+      width: clamp(170px, 12.708vw, 260px); /*244px */
+      height: clamp(170px, 13.021vw, 260px); /*250px */
+      position: absolute;
+
+      @include media-query(1024px) {
+        width: clamp(130px, 12.708vw, 260px);
+        height: clamp(130px, 13.021vw, 260px);
+      }
+
+      @include media-query(576px) {
+        width: clamp(90px, 12.708vw, 260px);
+        height: clamp(90px, 13.021vw, 260px);
+      }
+
+      @include media-query(767px) {
+        width: clamp(100px, 12.708vw, 260px);
+        height: clamp(100px, 13.021vw, 260px);
+      }
+
+      @include media-query(576px) {
+        width: clamp(70px, 12.708vw, 260px);
+        height: clamp(70px, 13.021vw, 260px);
+      }
+
+      &.element-1 {
+        top: clamp(-22px, -2.292vw, 55px);
+        /* -44px*/
+        left: clamp(5px, 1.25vw, 28px);
+        /* 24px*/
+
+        @include media-query(576px) {
+          top: clamp(-30px, -7.292vw, 55px);
+        }
+      }
+
+      &.element-2 {
+        top: clamp(-35px, -2.292vw, 55px);
+        /* -44px*/
+        right: clamp(5px, 1.25vw, 28px);
+        /* 24px*/
+        @include media-query(576px) {
+          top: clamp(-30px, -7.292vw, 55px);
+        }
+      }
+
+      &.element-3 {
+        bottom: clamp(-58px, -2.865vw, 60px);
+        /* -55px*/
+        left: clamp(12px, 1.25vw, 28px);
+        /* 24px*/
+        @include media-query(767px) {
+          display: none;
+        }
+      }
+
+      &.element-4 {
+        bottom: clamp(-58px, -2.865vw, 60px);
+        /* -55px*/
+        right: clamp(20px, 1.25vw, 28px);
+        /* 24px*/
+        @include media-query(767px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.card-item-1 {
+  .image-box {
+    border-radius: $br-8 $br-8 0px 0px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      -webkit-transition: all 0.3s linear 0s;
+      transition: all 0.3s linear 0s;
+      border-radius: $br-8 $br-8 0px 0px;
+    }
+  }
+
+  .card-text {
+    border-radius: 0px 0px 0.833vw 0.833vw;
+    background-color: $white;
+    padding: clamp(18px, 1.25vw, 48px) clamp(13px, 1.25vw, 48px);
+
+    h5 {
+      transition: $transition;
+    }
+  }
+
+  &:hover {
+    .image-box {
+      img {
+        -webkit-transform: scale(1.07);
+        transform: scale(1.07);
+        -webkit-transition: all 0.3s linear 0s;
+        transition: all 0.3s linear 0s;
+      }
+    }
+    h5 {
+      transition: $transition;
+      color: $accent-1;
+    }
+  }
+}
